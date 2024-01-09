@@ -111,8 +111,9 @@
     // 🧠 At each iteration of the loop, if the current character is not "x", then add it to the end of the result array.
     // 🧠 You can merge the result array back into a string by using join. Example: ["f", "o", "o"].join("") yields "foo"
     // 🧠 Do not forget to return your rejoined string!
-    function stripX() {
-
+    function stripX(stringshere) {
+      let splitting = stringshere.split('x')
+      return splitting.join("")
     }
 
     // 👉 CHALLENGE 8
@@ -124,21 +125,28 @@
     // ❗ Important Notes:
     // 🧠 Try to solve this problem without looking at how you solved the previous one.
     // 🧠 If you need to look, do not copy & paste code. Take a peek and then work from memory!
-    function stripChar() {
-
+    function stripChar(stringw, arg) {
+      let splitting2 = stringw.split(arg)
+      return splitting2.join("")
     }
 
     // 👉 CHALLENGE 9
     // 🧠 The function getProps takes an object as its argument.
     // 🧠 The function returns an array containing the property names of the object.
     // 🧠 However, if the properties "age" or "married" come up, do not include them in the returned array.
-    // 🧠 Avoid using the delete operator in your implementation. We don't wish to alter the object!
+    // 🧠 Avoid using the delete and filter operator in your implementation. We don't wish to alter the object!
     // 🧠 Examples of usage:
     // getProps({ lastName: "Smith", age: 35 }) // should return ["lastName"]
     // getProps({ firstName: "Jane", married: false }) // should return ["firstName"]
     // getProps({ name: "Bamby", favFood: "flowers" }) // should return ["name", "favFood"]
-    function getProps() {
-
+    function getProps(firstting) {
+      let result = [];
+      for (let filtering in firstting) {
+        if (filtering !== "age" && filtering !== "married") {
+        result.push(filtering);
+        }
+      }
+      return result;     
     }
 
     // 🧪 TESTS, do not work below this line
