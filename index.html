@@ -79,8 +79,13 @@
     // 🧠 Examples of usage:
     // firstOrLast(['a', 'b'], true) // should return 'a'
     // firstOrLast(['a', 'b'], false) // should return 'b'
-    function firstOrLast() {
-
+    function firstOrLast(letters, trueorfalse ) {
+      if (trueorfalse) {
+        return letters[0]
+      }
+      else {
+        return letters[letters.length -1];
+      }
     }
 
     // 👉 CHALLENGE 6
@@ -89,8 +94,9 @@
     // 🧠 Examples of usage:
     // pushElement([], 1) // should return [1]
     // pushElement(['a', 'b'], 'c') // should return ['a', 'b', 'c']
-    function pushElement() {
-
+    function pushElement(array, othfunc) {
+      array.push(othfunc)
+      return array
     }
 
     // 👉 CHALLENGE 7
