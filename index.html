@@ -77,7 +77,15 @@
     // 🧠 Examples of usage:
     // firstOrLast(['a', 'b'], true) // should return 'a'
     // firstOrLast(['a', 'b'], false) // should return 'b'
-    function firstOrLast() {
+    function firstOrLast(array, boolean) {
+      let arg = array
+      let bool = boolean
+      if (bool === true) {
+        return arg[0]
+      }
+      else {
+        return arg.at(-1)
+      }
 
     }
 
