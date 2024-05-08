@@ -33,7 +33,8 @@
     // 🧠 Example of usage:
     // buildUser("John", "Smith", 30) // should return { firstName: "John", lastName: "Smith", age: 30 }
     function buildUser(firstName, lastName, age) {
-
+      let users = {firstName: firstName, lastName: lastName, age: age}
+      return users
     }
 
     // 👉 CHALLENGE 3
@@ -44,9 +45,15 @@
     // 🧠 Examples of usage:
     // deletePrice({ item: "Tesla Model 3", price: 40000 }) // should return { item: "Tesla Model 3" }
     // deletePrice({ item: "Kobo Libra 2" }) // should return { item: "Kobo Libra 2", priceless: true }
-    function deletePrice() {
+    function deletePrice(obj) {
+    if (obj.hasOwnProperty('price')) {
 
+        delete obj.price;
+    } else {
+        obj.priceless = true;
     }
+    return obj;      
+  }
 
     // 👉 CHALLENGE 4
     // 🧠 The function evenList takes an array as its argument and returns true if the array has an even number of elements, false otherwise.
@@ -55,7 +62,13 @@
     // evenList(['a']) // should return false
     // evenList(['a', 'b']) // should return true
     function evenList(arr) {
-
+      let argue = arr
+      if (argue.length % 2 === 0) {
+        return true
+      }
+      else {
+        return false
+      }
     }
 
     // 👉 CHALLENGE 5
